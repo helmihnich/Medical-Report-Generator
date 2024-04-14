@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/add_appoinment"
+        android:textColor="#4A86E8"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="290dp"
+        android:layout_height="1dp"
+        android:background="#9D9C9C"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp" />
+
+    <LinearLayout
+        android:layout_width="290dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:background="#FFFFFF"
+        android:fadingEdge="horizontal|vertical"
+        android:gravity="center|center_vertical"
+        android:orientation="horizontal"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        tools:ignore="ExtraText">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="68dp"
+
+            android:layout_marginRight="20dp"
+            android:background="#9D9C9C"
+            android:layout_marginEnd="20dp" />
+
+        <ImageView
+            android:id="@+id/Time2"
+            android:layout_width="37dp"
+            android:layout_height="34dp"
+
+            android:clickable="true"
+            android:contentDescription="@string/todo"
+            android:focusable="true"
+            android:onClick="onCalendarIconClicked"
+            android:src="@drawable/calendar"
+            tools:ignore="TouchTargetSizeCheck,UsingOnClickInXml" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:background="#9D9C9C"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="15dp" />
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:background="@null"
+            android:ems="10"
+            android:hint="@string/date"
+            android:inputType="date"
+            android:textColorHint="#757575"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="68dp"
+
+            android:background="#9D9C9C" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="290dp"
+        android:layout_height="1dp"
+        android:background="#9D9C9C"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp" />
+
+    <View
+        android:layout_width="290dp"
+        android:layout_height="1dp"
+        android:background="#9D9C9C"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp" />
+
+    <LinearLayout
+        android:layout_width="290dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:background="#FFFFFF"
+        android:fadingEdge="horizontal|vertical"
+        android:gravity="center|center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="ExtraText">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="68dp"
+            android:layout_marginRight="20dp"
+            android:background="#9D9C9C"
+            android:layout_marginEnd="20dp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+
+            android:layout_width="37dp"
+            android:layout_height="34dp"
+
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/time"
+            android:focusable="true"
+            app:srcCompat="@drawable/clock"
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:background="#9D9C9C"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="15dp" />
+
+        <EditText
+            android:id="@+id/editTextTime2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:background="@null"
+            android:ems="10"
+            android:hint="Time"
+            android:inputType="time"
+            android:textColorHint="#757575"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="68dp"
+
+            android:background="#9D9C9C" />
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="290dp"
+        android:layout_height="1dp"
+        android:background="#9D9C9C"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp" />
+
+    <View
+        android:layout_width="290dp"
+        android:layout_height="1dp"
+        android:background="#9D9C9C"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp" />
+
+    <LinearLayout
+        android:layout_width="290dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:background="#FFFFFF"
+        android:fadingEdge="horizontal|vertical"
+        android:gravity="center|center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="ExtraText">
+
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="42dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/baseline_search_24" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

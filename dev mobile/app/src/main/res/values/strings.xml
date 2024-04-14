@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MRG</string>
+    <string name="username">Username</string>
+    <string name="passeword">passeword</string>
+    <string name="label">label\n</string>
+    <string name="confirm_password">Confirm password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
+    <string name="profil">Profil</string>
+    <string name="appointments">Appointments</string>
+    <string name="add_appoinment">Add Appoinment</string>
+    <string name="calendar_icon">Calendar Icon</string>
+    <string name="calendar_icon2">Calendar Icon</string>
+    <string name="textview">TextView</string>
+    <string name="todo">TODO</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="time5">Time</string>
+    <string name="Time">Time</string>
+</resources>

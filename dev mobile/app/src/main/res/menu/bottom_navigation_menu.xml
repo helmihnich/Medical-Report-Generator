@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+            android:id="@+id/item_search"
+            android:enabled="true"
+            android:icon="@drawable/search"
+            android:title="@string/search"/>
+        <item
+            android:id="@+id/item_App"
+            android:enabled="true"
+            android:icon="@drawable/clock"
+            android:title="@string/appointments"/>
+    <item
+        android:id="@+id/item_Profil"
+        android:enabled="true"
+        android:icon="@drawable/user"
+        android:title="@string/profil"/>
+
+</menu>
