@@ -18,4 +18,10 @@
     <string name="time">Time</string>
     <string name="time5">Time</string>
     <string name="Time">Time</string>
+    <string name="editTexttime">Time</string>
+    <string name="searchbox">Search</string>
+    <string name="helmi_hnich">Helmi Hnich</string>
+    <string name="save">Save</string>
+    <string name="plus">+</string>
+    <string name="name_patient">Name, Patient</string>
 </resources>
