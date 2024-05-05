@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/edittext_border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Border Color -->
+    <stroke
+        android:width="2dp" /> <!-- Border width -->
+    <!-- Border color -->
+    <solid android:color="#9D9C9C" />
+
+    <!-- Background Color (Optional) -->
+    <solid android:color="#ffffff" /> <!-- Background color -->
+
+    <!-- Corner Radius (Optional) -->
+    <corners android:radius="8dp" /> <!-- Corner radius, adjust as needed -->
+
+</shape>

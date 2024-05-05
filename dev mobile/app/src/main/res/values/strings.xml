@@ -24,4 +24,12 @@
     <string name="save">Save</string>
     <string name="plus">+</string>
     <string name="name_patient">Name, Patient</string>
+    <string name="patient_registration">Patient Registration</string>
+    <string name="patient_name">Name</string>
+    <string name="age">Age</string>
+    <string name="patient_s_name">Patient\'s name</string>
+    <string name="patient_adresse">Adresse</string>
+    <string name="add_patient">Add patient</string>
+    <string name="patient_s_name1">Patient\'s name</string>
+    <string name="Patiename">Patient\'s name</string>
 </resources>
