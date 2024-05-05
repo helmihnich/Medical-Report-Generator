@@ -1,11 +1,6 @@
 package com.example.mrg;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +8,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.example.mrg.DatabaseHelper;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ProfilFragment#newInstance} factory method to
@@ -23,7 +21,8 @@ public class PatientRegistration  extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private DatabaseHelper dbHelper;
+
+    private PatientDbHelper dbHelper;
     private EditText editTextName;
     private EditText editTextAge;
     private EditText editTextAddress;
@@ -51,7 +50,7 @@ public class PatientRegistration  extends Fragment {
         Button buttonAddPatient = view.findViewById(R.id.button);
 
         // Initialize the dbHelper
-        dbHelper = new DatabaseHelper(requireContext());
+        dbHelper = new PatientDbHelper(getContext());
 
         // Set click listener for the button to add a patient
         buttonAddPatient.setOnClickListener(new View.OnClickListener() {
@@ -62,23 +61,15 @@ public class PatientRegistration  extends Fragment {
                 String ageStr = editTextAge.getText().toString();
                 String address = editTextAddress.getText().toString();
 
-                // Convert age string to integer with error handling
-                int age;
-                try {
-                    age = Integer.parseInt(ageStr);
-                } catch (NumberFormatException e) {
-                    // Handle invalid age input
-                    Toast.makeText(getContext(), "Please enter a valid age", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+                // Convert age string to integer
+                int age = Integer.parseInt(ageStr);
 
                 // Add patient to database
-                Patient patient = new Patient(-1, name, age, address);
-                long patientId = dbHelper.addPatient(patient);
+                long newRowId = dbHelper.addPatient(name, age, address);
 
-                if (patientId != -1) {
+                if (newRowId != -1) {
                     // Insertion successful
-                    String message = "Patient added successfully with ID: " + patientId;
+                    String message = "Patient added successfully with ID: " + newRowId;
                     Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
                     AppoinementFragment();
                 } else {
@@ -110,4 +101,5 @@ public class PatientRegistration  extends Fragment {
         // Valider et soumettre la transaction
         fragmentTransaction.commit();
     }
+
 }

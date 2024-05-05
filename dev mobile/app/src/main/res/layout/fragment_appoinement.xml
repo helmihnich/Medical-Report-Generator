@@ -201,8 +201,7 @@
             android:layout_width="37dp"
             android:layout_height="37dp"
             android:layout_weight="1"
-            android:src="@drawable/search"
-            android:contentDescription="search" />
+            android:src="@drawable/search"/>
 
         <View
             android:layout_width="2dp"

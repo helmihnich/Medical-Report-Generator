@@ -1,9 +1,13 @@
 package com.example.mrg;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.content.ContentValues;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class PatientDbHelper extends SQLiteOpenHelper {
@@ -43,6 +47,29 @@ public class PatientDbHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_ENTRIES);
         onCreate(db);
     }
+
+    // Inside your DatabaseHelper class
+
+    public List<String> getAllPatientNames() {
+        List<String> patientNames = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT " + "name" + " FROM " + "patients";
+
+        Cursor cursor = db.rawQuery(query, null);
+        if (cursor != null && cursor.moveToFirst()) {
+            int nameColumnIndex = cursor.getColumnIndex("name");
+            do {
+                if (nameColumnIndex != -1) {
+                    String name = cursor.getString(nameColumnIndex);
+                    patientNames.add(name);
+                }
+            } while (cursor.moveToNext());
+            cursor.close();
+        }
+        return patientNames;
+    }
+
+
 
 
 

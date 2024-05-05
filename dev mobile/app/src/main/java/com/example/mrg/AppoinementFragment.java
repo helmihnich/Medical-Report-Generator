@@ -15,12 +15,15 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -33,6 +36,7 @@ public class AppoinementFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
+    private PatientDbHelper dbHelper;
     private static final String ARG_PARAM2 = "param2";
 
     public AppoinementFragment() {
@@ -56,8 +60,10 @@ public class AppoinementFragment extends Fragment {
 
         // Find the EditText for the date
         final EditText editTextDate = rootView.findViewById(R.id.editTextDate);
+        dbHelper = new PatientDbHelper(getContext());
         // Find the EditText for the time
         final EditText editTextTime = rootView.findViewById(R.id.editTexttime);
+
 
         // Find the ImageView for the calendar icon
         rootView.findViewById(R.id.Time2).setOnClickListener(new View.OnClickListener() {
@@ -120,6 +126,20 @@ public class AppoinementFragment extends Fragment {
 
 
         });
+
+        // Inside onCreateView() method of your AppoinementFragment fragment
+
+// Fetch all patient names from the database
+        List<String> patientNames = dbHelper.getAllPatientNames();
+
+// Find the ListView in your layout
+        ListView listViewPatients = rootView.findViewById(R.id.listViewPatients);
+
+// Create an ArrayAdapter to populate the ListView
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1, patientNames);
+
+// Set the adapter to the ListView
+        listViewPatients.setAdapter(adapter);
 
 
         return rootView;
